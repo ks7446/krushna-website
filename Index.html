@@ -1,63 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Krushna Project Website</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Big Website</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial;
             margin: 0;
-            background:#f2f2f2;
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fa;
         }
-        header {
-            background:#2c3e50;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+
+        /* NAVBAR */
         nav {
-            background: #34495e;
-            padding: 10px;
-            text-align: center;
+            background: #111;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
+
         nav a {
             color: white;
-            margin: 15px;
             text-decoration: none;
-            font-size: 18px;
+            margin: 0 15px;
+            font-weight: 600;
         }
-        section {
-            padding: 40px;
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to right, #2e3192, #1bffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding-top: 60px;
             text-align: center;
         }
-        h1 {
-            color: #2c3e50;
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
         }
-        p {
-            font-size: 20px;
+
+        .hero p {
+            font-size: 22px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-box {
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-box h3 {
+            margin-bottom: 15px;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            width: 350px;
+            border-radius: 12px;
+        }
+
+        /* CONTACT FORM */
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #111;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Welcome to Krushna's Project Website</h1>
-</header>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">MyWebsite</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="project.html">Project</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- HERO -->
+    <div class="hero" id="home">
+        <div>
+            <h1>Welcome to My Website</h1>
+            <p>This is a fully responsive big website built with HTML & CSS</p>
+        </div>
+    </div>
 
-<section>
-    <h2>Hello, I'm Krushna</h2>
-    <p>Hello and thank you for visiting my website!</p>
-</section>
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>We create beautiful and fast websites.</p>
+            </div>
+            <div class="service-box">
+                <h3>App Development</h3>
+                <p>Android & iOS mobile applications.</p>
+            </div>
+            <div class="service-box">
+                <h3>Graphic Design</h3>
+                <p>Logos, posters, social media designs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about">
+            <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546" alt="">
+            <p>
+                We are a team of developers and designers building modern digital products.
+                Our mission is to deliver high-quality websites and apps for clients all over the world.
+            </p>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        <p style="text-align:center;">Coming Soon...</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 MyWebsite. All rights reserved.
+    </footer>
 
 </body>
+
 </html>
-
-
-
